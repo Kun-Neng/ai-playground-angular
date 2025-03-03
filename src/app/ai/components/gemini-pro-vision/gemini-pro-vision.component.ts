@@ -52,7 +52,7 @@ export class GeminiProVisionComponent {
         return;
       }
 
-      const genModel = this.generativeAiService.getGenModel('gemini-pro-vision');
+      const genModel = this.generativeAiService.getGenModel('gemini-2.0-flash');
 
       const prompt = [
         {
