@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { GeminiProChatComponent } from './gemini-pro-chat.component';
+import { GeminiTextComponent } from './gemini-text.component';
 
-describe('GeminiProChatComponent', () => {
-  let component: GeminiProChatComponent;
-  let fixture: ComponentFixture<GeminiProChatComponent>;
+describe('GeminiTextComponent', () => {
+  let component: GeminiTextComponent;
+  let fixture: ComponentFixture<GeminiTextComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [GeminiProChatComponent]
+      imports: [GeminiTextComponent]
     })
     .compileComponents();
     
-    fixture = TestBed.createComponent(GeminiProChatComponent);
+    fixture = TestBed.createComponent(GeminiTextComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
