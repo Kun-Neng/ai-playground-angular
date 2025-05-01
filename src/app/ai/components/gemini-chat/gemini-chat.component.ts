@@ -8,15 +8,15 @@ import { Message, MessageComponent } from './components/message/message.componen
 import { MessageInputComponent } from './components/message-input/message-input.component';
 
 @Component({
-  selector: 'app-gemini-pro-chat',
+  selector: 'app-gemini-chat',
   standalone: true,
   imports: [NgIf, NgFor, NgClass, ReactiveFormsModule, MessageComponent, MessageInputComponent],
-  templateUrl: './gemini-pro-chat.component.html',
-  styleUrl: './gemini-pro-chat.component.scss',
+  templateUrl: './gemini-chat.component.html',
+  styleUrl: './gemini-chat.component.scss',
   encapsulation: ViewEncapsulation.None,
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class GeminiProChatComponent implements OnInit, AfterViewInit, OnDestroy {
+export class GeminiChatComponent implements OnInit, AfterViewInit, OnDestroy {
   @ViewChild('messageContainer') messageContainer!: ElementRef;
   @ViewChildren('messageElements') messageElements!: QueryList<any>;
 

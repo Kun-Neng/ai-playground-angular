@@ -5,15 +5,15 @@ import { MarkdownComponent } from 'ngx-markdown';
 import { GenerativeAiService } from '../../../services/generative-ai.service';
 
 @Component({
-  selector: 'app-gemini-pro',
+  selector: 'app-gemini-text',
   standalone: true,
   imports: [NgIf, NgClass, ReactiveFormsModule, MarkdownComponent],
-  templateUrl: './gemini-pro.component.html',
-  styleUrl: './gemini-pro.component.scss',
+  templateUrl: './gemini-text.component.html',
+  styleUrl: './gemini-text.component.scss',
   encapsulation: ViewEncapsulation.None,
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class GeminiProComponent {
+export class GeminiTextComponent {
   isLoading = false;
   isBlocked = false;
 
