@@ -43,12 +43,8 @@
           <input type="text" inputmode="numeric" maxlength="4" required class="w-full p-1 md:text-xs bg-purple-100 border border-purple-200 rounded focus:outline-none focus:bg-white focus:border-purple-500" formControlName="temperature" />
         </app-setting>
 
-        <app-setting [title]="'Top K'" [description]="tooltips.top_k" [showDescription]="showMore">
-          <input type="number" min="1" step="1" required class="w-full p-1 md:text-xs bg-purple-100 border border-purple-200 rounded focus:outline-none focus:bg-white focus:border-purple-500" formControlName="top_k" />
-        </app-setting>
-
         <app-setting [title]="'Top P'" [description]="tooltips.top_p" [showDescription]="showMore">
-          <input type="text" inputmode="numeric" maxlength="4" required class="w-full p-1 md:text-xs bg-purple-100 border border-purple-200 rounded focus:outline-none focus:bg-white focus:border-purple-500" formControlName="top_p" />
+          <input type="number" inputmode="numeric" maxlength="4" required class="w-full p-1 md:text-xs bg-purple-100 border border-purple-200 rounded focus:outline-none focus:bg-white focus:border-purple-500" formControlName="top_p" />
         </app-setting>
 
       </div>
@@ -65,15 +61,6 @@
         </ng-container>
         <ng-container *ngIf="form.controls.temperature.errors?.['numberTooBig']">
           Value of Temperature must be smaller than or equals to 1
-        </ng-container>
-      </div>
-
-      <div *ngIf="form.controls.top_k.invalid" class="text-[10px] text-red-600 leading-normal">
-        <ng-container *ngIf="form.controls.top_k.errors?.['required']">
-          Value of Top K is required
-        </ng-container>
-        <ng-container *ngIf="form.controls.top_k.errors?.['min']">
-          Value of Top K must be greater than or equals to 1
         </ng-container>
       </div>
 
