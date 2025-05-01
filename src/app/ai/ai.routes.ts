@@ -1,23 +1,31 @@
 import { Routes } from '@angular/router';
 
 export const routes: Routes = [
-  { path: '', redirectTo: 'gemini-pro', pathMatch: 'full' },
+  {
+    path: '',
+    redirectTo: 'gemini-text',
+    pathMatch: 'full'
+  },
   {
     path: '',
     loadComponent: () => import('./ai.component').then(m => m.AiComponent),
     children: [
       {
-        path: 'gemini-pro',
-        loadComponent: () => import('./components/gemini-pro/gemini-pro.component').then(m => m.GeminiProComponent)
+        path: 'gemini-text',
+        loadComponent: () => import('./components/gemini-text/gemini-text.component').then(m => m.GeminiTextComponent)
       },
       {
-        path: 'gemini-pro-vision',
-        loadComponent: () => import('./components/gemini-pro-vision/gemini-pro-vision.component').then(m => m.GeminiProVisionComponent)
+        path: 'gemini-vision',
+        loadComponent: () => import('./components/gemini-vision/gemini-vision.component').then(m => m.GeminiVisionComponent)
       },
       {
-        path: 'gemini-pro-chat',
-        loadComponent: () => import('./components/gemini-pro-chat/gemini-pro-chat.component').then(m => m.GeminiProChatComponent)
+        path: 'gemini-chat',
+        loadComponent: () => import('./components/gemini-chat/gemini-chat.component').then(m => m.GeminiChatComponent)
       }
     ]
+  },
+  {
+    path: '**',
+    redirectTo: 'gemini-text'
   }
 ];

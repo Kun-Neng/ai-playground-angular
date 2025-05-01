@@ -1,20 +1,18 @@
 import { ChangeDetectionStrategy, ChangeDetectorRef, Component, ViewEncapsulation } from '@angular/core';
 import { NgClass, NgIf } from '@angular/common';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
-import { firstValueFrom } from 'rxjs';
 import { GenerativeAiService } from '../../../services/generative-ai.service';
 import { FileConversionService } from '../../../services/file-conversion.service';
 
 @Component({
-  selector: 'app-gemini-pro-vision',
-  standalone: true,
+  selector: 'app-gemini-vision',
   imports: [NgIf, NgClass, ReactiveFormsModule],
-  templateUrl: './gemini-pro-vision.component.html',
-  styleUrl: './gemini-pro-vision.component.scss',
+  templateUrl: './gemini-vision.component.html',
+  styleUrl: './gemini-vision.component.scss',
   encapsulation: ViewEncapsulation.None,
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class GeminiProVisionComponent {
+export class GeminiVisionComponent {
   isLoading = false;
   isBlocked = false;
 
