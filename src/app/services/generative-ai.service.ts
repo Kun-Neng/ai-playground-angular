@@ -1,11 +1,11 @@
 import { Injectable } from '@angular/core';
-import { GenerativeModel, GoogleGenerativeAI, HarmBlockThreshold, HarmCategory } from '@google/generative-ai';
+import { GenerativeModel, GoogleGenerativeAI, HarmBlockThreshold, HarmCategory, ModelParams } from '@google/generative-ai';
 import { BehaviorSubject } from 'rxjs';
 import { environment } from '../../environments/environment.development';
 
 export interface settingConfigs {
   temperature: number;
-  top_k: number;
+  top_k?: number;
   top_p: number;
   maxOutputTokens: number;
 }
@@ -24,7 +24,6 @@ export class GenerativeAiService {
       }
     ],
     temperature: 0.9,
-    top_k: 32,
     top_p: 1,
     maxOutputTokens: 100
   });
@@ -35,10 +34,12 @@ export class GenerativeAiService {
   }
 
   getGenModel(model: string): GenerativeModel {
-    return this.genAI?.getGenerativeModel({
+    const modelParams: ModelParams = {
       model,
       ...this.genConfig.value
-    });
+    };
+
+    return this.genAI?.getGenerativeModel(modelParams);
   }
 
   setConfig(configs: settingConfigs) {
