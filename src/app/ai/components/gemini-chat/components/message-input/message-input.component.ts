@@ -4,7 +4,6 @@ import { ControlValueAccessor, FormControl, FormGroup, NG_VALUE_ACCESSOR, Reacti
 
 @Component({
   selector: 'app-message-input',
-  standalone: true,
   imports: [NgClass, ReactiveFormsModule],
   templateUrl: './message-input.component.html',
   styleUrl: './message-input.component.scss',

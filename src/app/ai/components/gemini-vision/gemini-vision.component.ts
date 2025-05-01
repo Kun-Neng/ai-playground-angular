@@ -6,7 +6,6 @@ import { FileConversionService } from '../../../services/file-conversion.service
 
 @Component({
   selector: 'app-gemini-vision',
-  standalone: true,
   imports: [NgIf, NgClass, ReactiveFormsModule],
   templateUrl: './gemini-vision.component.html',
   styleUrl: './gemini-vision.component.scss',

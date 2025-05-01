@@ -6,7 +6,6 @@ import { GenerativeAiService } from '../../../services/generative-ai.service';
 
 @Component({
   selector: 'app-gemini-text',
-  standalone: true,
   imports: [NgIf, NgClass, ReactiveFormsModule, MarkdownComponent],
   templateUrl: './gemini-text.component.html',
   styleUrl: './gemini-text.component.scss',

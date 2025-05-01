@@ -4,7 +4,6 @@ import { SettingsComponent } from './components/settings/settings.component';
 
 @Component({
   selector: 'app-ai',
-  standalone: true,
   imports: [RouterModule, SettingsComponent],
   templateUrl: './ai.component.html',
   styleUrl: './ai.component.scss',

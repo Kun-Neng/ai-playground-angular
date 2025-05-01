@@ -8,7 +8,6 @@ import { numberInputValidator } from './number-input-validator';
 
 @Component({
   selector: 'app-settings',
-  standalone: true,
   imports: [NgIf, NgFor, NgClass, AsyncPipe, ReactiveFormsModule, SettingComponent],
   templateUrl: './settings.component.html',
   styleUrl: './settings.component.scss',

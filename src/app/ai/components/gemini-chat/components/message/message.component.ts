@@ -10,7 +10,6 @@ export interface Message {
 
 @Component({
   selector: 'app-message',
-  standalone: true,
   imports: [NgIf, NgClass, DatePipe],
   templateUrl: './message.component.html',
   styleUrl: './message.component.scss',

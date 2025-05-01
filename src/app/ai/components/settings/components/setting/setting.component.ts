@@ -3,7 +3,6 @@ import { ChangeDetectionStrategy, Component, Input, ViewEncapsulation } from '@a
 
 @Component({
   selector: 'app-setting',
-  standalone: true,
   imports: [NgClass, NgIf],
   templateUrl: './setting.component.html',
   styleUrl: './setting.component.scss',

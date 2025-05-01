@@ -9,7 +9,6 @@ import { MessageInputComponent } from './components/message-input/message-input.
 
 @Component({
   selector: 'app-gemini-chat',
-  standalone: true,
   imports: [NgIf, NgFor, NgClass, ReactiveFormsModule, MessageComponent, MessageInputComponent],
   templateUrl: './gemini-chat.component.html',
   styleUrl: './gemini-chat.component.scss',
