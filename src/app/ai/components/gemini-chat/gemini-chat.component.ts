@@ -47,7 +47,7 @@ export class GeminiChatComponent implements OnInit, AfterViewInit, OnDestroy {
         parts: { text: !!text ? text : '' }
       });
 
-      const genModel = this.generativeAiService.getGenModel('gemini-2.0-flash');
+      const genModel = this.generativeAiService.getGenModel('gemini-2.5-flash');
       const chat = genModel.startChat({
         // history: [
         //   {

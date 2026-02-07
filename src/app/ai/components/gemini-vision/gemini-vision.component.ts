@@ -50,7 +50,7 @@ export class GeminiVisionComponent {
         return;
       }
 
-      const genModel = this.generativeAiService.getGenModel('gemini-2.0-flash');
+      const genModel = this.generativeAiService.getGenModel('gemini-2.5-flash');
 
       const prompt = [
         {

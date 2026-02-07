@@ -25,7 +25,7 @@ export class GeminiTextComponent {
     private generativeAiService: GenerativeAiService) { }
 
   async sendText() {
-    const genModel = this.generativeAiService.getGenModel('gemini-2.0-flash');
+    const genModel = this.generativeAiService.getGenModel('gemini-2.5-flash');
 
     this.promptText = this.prompt.value!;
     this.generativeAiService.resetConfig();

@@ -1,7 +1,8 @@
-import { Injectable } from '@angular/core';
+import { inject, Injectable } from '@angular/core';
 import { GenerativeModel, GoogleGenerativeAI, HarmBlockThreshold, HarmCategory, ModelParams } from '@google/generative-ai';
 import { BehaviorSubject } from 'rxjs';
 import { environment } from '../../environments/environment.development';
+import { ConfigService } from './config.service';
 
 export interface settingConfigs {
   temperature: number;
@@ -14,6 +15,9 @@ export interface settingConfigs {
   providedIn: 'root'
 })
 export class GenerativeAiService {
+  private configService = inject(ConfigService);
+  private readonly API_KEY = this.configService.apiKey;
+
   private genAI: GoogleGenerativeAI;
 
   private genConfig = new BehaviorSubject({
@@ -30,7 +34,7 @@ export class GenerativeAiService {
   genConfig$ = this.genConfig.asObservable();
 
   constructor() {
-    this.genAI = new GoogleGenerativeAI(environment.API_KEY);
+    this.genAI = new GoogleGenerativeAI(this.API_KEY);
   }
 
   getGenModel(model: string): GenerativeModel {
