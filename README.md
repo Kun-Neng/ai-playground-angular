@@ -12,7 +12,15 @@ Run `ng generate component component-name` to generate a new component. You can 
 
 ## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+1. Create a file named `config.dev.json` under `src/assets/` with the following content:
+
+```json
+{
+  "apiKey": "YOUR_API_KEY"
+}
+```
+
+2. Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
 ## Running unit tests
 
@@ -27,7 +35,9 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
 
 ## Article
+
 [使用 Angular 結合 Google Gemini 打造客製化的 AI 互動應用程式](https://medium.com/@kunneng.hung/%E4%BD%BF%E7%94%A8-angular-%E7%B5%90%E5%90%88-google-gemini-%E6%89%93%E9%80%A0%E5%AE%A2%E8%A3%BD%E5%8C%96%E7%9A%84-ai-%E4%BA%92%E5%8B%95%E6%87%89%E7%94%A8%E7%A8%8B%E5%BC%8F-a60c6f1df82e)
 
 ## Demo
+
 [StackBlitz](https://stackblitz.com/~/github.com/Kun-Neng/ai-playground-angular)
